@@ -12,7 +12,7 @@ const Modal = ({modalOpen, selectedImage, setModalOpen}: ModalProps) => {
     if (!modalOpen || !selectedImage) {
         return null;
       }
-    const [statistics, setStatistics] = useState({}) 
+    const [statistics, setStatistics] = useState<any>({}) 
 
     useEffect( () => {
       const fetchData = async (id: string) => {         

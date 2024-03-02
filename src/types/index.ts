@@ -20,11 +20,7 @@ export interface HistoryProps {
     setImages: (images: any) => void;   
 }
 
-export interface ModalProps {
-    modalOpen: boolean;
-    selectedImage: any;
-    setModalOpen: (modalOpen: any) => void;
-}
+
 
 export interface ImgProps {
     image: any;
@@ -39,6 +35,12 @@ export interface ImagesProps {
     status: string;
     setSelectedImage:(selectedimage: any) => void; 
     setModalOpen: (modalOpen: any) => void;
+}
+
+export interface ModalProps {
+    modalOpen: boolean;
+    selectedImage: any;
+    setModalOpen: (modalOpen: any) => void;    
 }
 
 
