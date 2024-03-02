@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2rem;
+  width: 100%;
+  height: auto;
+  color: #222;
+  /* background-color: #eabfb9; */
+  background-color: #f0f4f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+#root{
+    width: 100%;
+}
+
+.app{
+    position: relative;      
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+}
+
+.logo{
+    width: 10rem;
+    height: 10rem;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 900;
+}
+
+.nav a.active{
+    color: hsl(8 99% 67%);
+    font-size: 24px;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+}
+
+.heading{
+    margin-bottom: 2rem;
+}
+
+.search-container{
+    width: 25rem;
+    position: relative;
+}
+
+.search{
+    height: 5.4rem;
+    border-radius: 9999px;
+    padding-inline: 2rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.search:focus{
+    outline: solid 1px hsl(8 99% 67%);
+}
+
+.search-img{
+    position: absolute;
+    top: 12px;
+    right: 1px;
+}
+
+.img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+}
+
+.image-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px gray;
+    border-radius: 15px;
+    padding: 1rem;
+    background: white;    
+}
+
+.image-box p{
+    font-size: 0.8rem;
+    width: 22rem;
+    font-weight: 900;
+}
+
+.name{
+    margin-left: 1rem;
+    font-weight: 900;
+    font-size: 1rem;
+    color: hsl(8 99% 67%);
+}
+
+.image{
+    height: 30rem;
+    width: 25rem;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.modal{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: white;
+    padding: 2rem;
+}
+
+.modal-img{
+    width: 80rem;
+    height: 40rem;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.modal-stats{
+    display: flex;
+    gap: 4rem;
+}
+
+.modal-stats p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-btn{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: hsl(8 99% 67%);
+    font-weight: 900;
+    font-size: 2.4rem;
+    border-color: hsl(8 99% 67%);
+    cursor: pointer;
+}
+
+.loader{
+    position: absolute;
+    top: -11rem;
+    left: 27rem;
+}
+
+.loader-bottom{
+    position: absolute;
+    bottom: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loader-img{
+    width: 10rem;
+    height: 7rem;
+}
+
+.history-heading{
+    margin-bottom: 4rem;
+}
+
+.history-list{
+    margin-bottom: 4rem;
+    border: solid 1px gray;
+    border-radius: 9999px;
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: 8rem;
+}
+
+.history-list li{
+    list-style: none;
+    margin-left: 4rem;
+    color:  hsl(8 99% 67%);    
+    cursor: pointer;
+}
+
+.history-list li:hover{  
+    font-weight: 900;
+    transition: all 0.2s ease;    
+}
