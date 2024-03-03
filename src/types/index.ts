@@ -17,7 +17,9 @@ export interface HistoryProps {
     images: string[];
     isLoading: boolean;
     setQuery: (query: any) => void;
-    setImages: (images: any) => void;   
+    setImages: (images: any) => void;
+    popularImg: string[];
+    status: string;   
 }
 
 

@@ -1,7 +1,7 @@
 import Loader from "../components/Loader";
 import { HistoryProps } from "../types";
 
-const History = ({searchHistory, images, isLoading, setQuery, setImages}: HistoryProps ) => {
+const History = ({searchHistory, images, isLoading, setQuery, setImages, popularImg, status}: HistoryProps ) => {
 
     //unique data filtering function
     function onlyUnique(value: string, index: number, array: string[]) {
@@ -22,15 +22,27 @@ const History = ({searchHistory, images, isLoading, setQuery, setImages}: Histor
         ))}
       </ul>
       <div className='img-container'>
-          {images?.map((image: any) => (
+          { status === 'popular' ? (
+              popularImg?.map((image: any) => (
+                <div className="image-box" key={crypto.randomUUID()}>
+                    <img className='image'                            
+                        src={image.urls.small}
+                        alt={image.alt_description}                            
+                    />
+                    <p>Photo By <strong className="name">{image.user.name}</strong></p>
+                </div>
+                ))
+          )
+          :
+         ( images?.map((image: any) => (
               <div className="image-box" key={crypto.randomUUID()}>
                   <img className='image'                            
-                      src={image.urls.thumb}
+                      src={image.urls.small}
                       alt={image.alt_description}                            
                   />
                   <p>Photo By <strong className="name">{image.user.name}</strong></p>
               </div>
-              ))}
+              )))}
           {isLoading && <Loader/>}    
       </div>
     </div>

@@ -99,6 +99,8 @@ useEffect(() => {
                                           isLoading={isLoading}
                                           setQuery={setQuery}
                                           setImages={setImages}
+                                          popularImg={popularImg}
+                                          status={status}
                                           />}/>           
           <Route path="/" element={<Home  query={query} 
                                           setQuery={setQuery} 
