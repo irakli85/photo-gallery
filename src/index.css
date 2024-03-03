@@ -22,7 +22,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 5rem;
-  background-image: url('./public/orn7.png'), url('./public/orn6.png'), url('./public/orn2.png');
+  background-image: url('orn7.png'), url('orn6.png'), url('orn2.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top 345px left 720px,
                        top 360px right 0,
