@@ -4,6 +4,7 @@ import History from './pages/History';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {  useEffect, useState } from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const abortController: any = new AbortController();
@@ -112,6 +113,7 @@ useEffect(() => {
                                           setSelectedImage={setSelectedImage}
                                  />}/>          
         </Routes>
+        <ScrollToTop/>
       </div>
     </BrowserRouter>
   )
