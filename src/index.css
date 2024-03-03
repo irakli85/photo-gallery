@@ -8,6 +8,13 @@
 
 html {
   font-size: 62.5%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 body {
@@ -26,8 +33,7 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top 345px left 720px,
                        top 360px right 0,
-                       top 0 left 50%
-  ;
+                       top 0 left 50%;
 }
 
 #root{
@@ -257,7 +263,7 @@ body {
     height: 7rem;
     position: fixed;
     bottom: 5rem;
-    right: 2rem;    
+    right: 3rem;    
     padding: 2rem;
     border-radius: 50%;
     border: none;
