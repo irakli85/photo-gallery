@@ -37,6 +37,7 @@ const Home = ({query,
   return (
     <div className='home'>
         <h1 className='heading'>Modern Photo Gallery</h1>
+        <p className="home_sub-title">Experience the Photo Gallery – a place where your snapshots come to life, beautifully framed in albums. Be the curator of your own world, selecting the best shots and storing them in History, ready to be revealed at your command.</p>
         <div className="search-container">
             <input className='search'
                 type="text"
