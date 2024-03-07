@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LazyLoad from 'react-lazy-load';
 import view from "../assets/view.svg"
 import download from "../assets/download.svg"
 import like from "../assets/like.svg"
@@ -26,7 +27,9 @@ const Modal = ({modalOpen, selectedImage, setModalOpen}: ModalProps) => {
       return (
         <div className="modal">
           <div className='modal-window'>
+          <LazyLoad>
             <img className='modal-img' src={selectedImage.urls.full} alt={selectedImage.alt_description} />
+          </LazyLoad>
             <div className='modal-stats'>
               <p><img src={download} alt="download" /> <strong>{statistics?.downloads?.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong></p>
               <p><img src={view} alt="view" /> <strong>{statistics?.views?.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong></p>
